@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CassutoTech | Local &amp; Remote Computer Help</title>
+  <meta name="description" content="Local and remote computer help in Southern Illinois. Get help with computer setup, Windows updates, cleanup, troubleshooting, slow performance, and technology questions.">
+  <meta name="theme-color" content="#07111f">
+  <link rel="canonical" href="https://cassutotech.com/">
+  <link rel="icon" href="cassutotech-mark.svg" type="image/svg+xml">
+  <meta property="og:title" content="CassutoTech | Local &amp; Remote Computer Help">
+  <meta property="og:description" content="Straightforward computer help in Southern Illinois, with remote support available.">
+  <meta property="og:url" content="https://cassutotech.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CassutoTech">
+  <style>
+    :root {
+      --ink: #07111f;
+      --ink-soft: #0d1d2d;
+      --cyan: #16d5f5;
+      --cyan-deep: #047f9b;
+      --ice: #eefbfe;
+      --white: #ffffff;
+      --text: #172837;
+      --muted: #5d6f7c;
+      --line: #d7e3e8;
+      --success: #43d99c;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: #f7fafb; color: var(--text); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .site-header { position: sticky; z-index: 50; top: 0; display: flex; align-items: center; justify-content: space-between; min-height: 78px; padding: 0 5vw; border-bottom: 1px solid rgba(22, 213, 245, 0.16); background: rgba(7, 17, 31, 0.94); color: white; backdrop-filter: blur(16px); }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 1.2rem; font-weight: 760; letter-spacing: -0.03em; }
+    .brand img { width: 44px; height: 44px; }
+    .brand > span > span { color: var(--cyan); }
+    nav { display: flex; align-items: center; gap: 30px; font-size: 0.93rem; font-weight: 590; }
+    nav a { color: #dbeaf0; transition: color 160ms ease, border-color 160ms ease, background 160ms ease; }
+    nav a:hover, nav a:focus-visible { color: white; }
+    .nav-cta { padding: 10px 17px; border: 1px solid rgba(22, 213, 245, 0.55); border-radius: 999px; color: var(--cyan); }
+    .nav-cta:hover, .nav-cta:focus-visible { background: var(--cyan); color: var(--ink); }
+
+    .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr); gap: clamp(44px, 7vw, 110px); min-height: 710px; padding: 102px 7vw 96px; overflow: hidden; background: linear-gradient(rgba(22, 213, 245, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(22, 213, 245, 0.035) 1px, transparent 1px), radial-gradient(circle at 70% 32%, rgba(0, 163, 205, 0.15), transparent 34%), var(--ink); background-size: 68px 68px, 68px 68px, auto, auto; color: white; }
+    .hero::after { content: ""; position: absolute; right: -110px; bottom: -220px; width: 620px; height: 620px; border: 1px solid rgba(22, 213, 245, 0.16); border-radius: 50%; box-shadow: 0 0 0 70px rgba(22, 213, 245, 0.025), 0 0 0 150px rgba(22, 213, 245, 0.018); }
+    .hero-glow { position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero-glow-one { top: -250px; left: -100px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(22, 213, 245, 0.13), transparent 67%); }
+    .hero-glow-two { top: 20%; right: 25%; width: 320px; height: 320px; background: radial-gradient(circle, rgba(22, 213, 245, 0.1), transparent 68%); }
+    .hero-content, .hero-card { position: relative; z-index: 2; }
+    .hero-content { align-self: center; max-width: 790px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; color: var(--cyan-deep); font-size: 0.78rem; font-weight: 760; letter-spacing: 0.14em; text-transform: uppercase; }
+    .eyebrow span { display: inline-block; width: 22px; height: 2px; background: currentColor; }
+    .hero .eyebrow { color: var(--cyan); }
+    .hero h1 { max-width: 850px; margin: 0; font-size: clamp(3.1rem, 6vw, 6.7rem); font-weight: 720; letter-spacing: -0.065em; line-height: 0.99; }
+    .hero h1 em { color: var(--cyan); font-style: normal; }
+    .hero-copy { max-width: 670px; margin: 30px 0 0; color: #c6d7df; font-size: clamp(1.06rem, 1.5vw, 1.26rem); line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; padding: 0 24px; border: 1px solid transparent; border-radius: 8px; font-weight: 720; transition: transform 160ms ease, background 160ms ease, border-color 160ms ease; }
+    .button:hover, .button:focus-visible { transform: translateY(-2px); }
+    .button-primary { background: var(--cyan); color: var(--ink); }
+    .button-primary:hover, .button-primary:focus-visible { background: #70e8fa; }
+    .button-secondary { border-color: rgba(255, 255, 255, 0.24); background: rgba(255, 255, 255, 0.05); color: white; }
+    .button-secondary:hover, .button-secondary:focus-visible { border-color: rgba(22, 213, 245, 0.6); background: rgba(22, 213, 245, 0.08); }
+    .hero-notes { display: flex; flex-wrap: wrap; gap: 16px 27px; margin-top: 30px; color: #9fb4bf; font-size: 0.85rem; }
+    .hero-notes span::before { content: "✓"; margin-right: 7px; color: var(--success); font-weight: 800; }
+
+    .hero-card { align-self: center; padding: 28px; border: 1px solid rgba(22, 213, 245, 0.2); border-radius: 20px; background: linear-gradient(145deg, rgba(16, 39, 61, 0.94), rgba(7, 17, 31, 0.97)); box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34); }
+    .hero-logo-wrap { display: grid; width: 94px; height: 94px; margin-bottom: 23px; place-items: center; border-radius: 20px; background: rgba(255, 255, 255, 0.035); }
+    .hero-logo-wrap img { width: 86px; height: 86px; }
+    .status { display: flex; align-items: center; gap: 9px; margin: 0 0 15px; color: #bcefdc; font-size: 0.82rem; font-weight: 650; }
+    .status span { width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 5px rgba(67, 217, 156, 0.1); }
+    .hero-card h2 { margin: 0; font-size: 1.65rem; letter-spacing: -0.03em; }
+    .hero-card > p:not(.status) { margin: 12px 0 25px; color: #aebfc8; line-height: 1.65; }
+    .contact-row { display: block; padding: 16px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .contact-row span, .contact-row strong { display: block; }
+    .contact-row span { margin-bottom: 5px; color: #8ca4b0; font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .contact-row strong { color: white; font-size: 0.96rem; overflow-wrap: anywhere; }
+    .contact-row:hover strong, .contact-row:focus-visible strong { color: var(--cyan); }
+
+    .trust-strip { display: grid; grid-template-columns: repeat(3, 1fr); padding: 25px 7vw; border-bottom: 1px solid var(--line); background: white; }
+    .trust-strip p { margin: 0; padding: 2px 30px; border-right: 1px solid var(--line); }
+    .trust-strip p:first-child { padding-left: 0; }
+    .trust-strip p:last-child { border-right: 0; }
+    .trust-strip strong, .trust-strip span { display: block; }
+    .trust-strip strong { margin-bottom: 4px; color: var(--ink); font-size: 0.9rem; }
+    .trust-strip span { color: var(--muted); font-size: 0.83rem; }
+
+    .section { padding: 104px 7vw; }
+    .section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr); gap: 80px; max-width: 1340px; margin: 0 auto 52px; align-items: end; }
+    .section-heading.compact { display: block; }
+    .section-heading h2, .about-panel h2, .contact-copy h2 { margin: 0; color: var(--ink); font-size: clamp(2.25rem, 4vw, 4.2rem); letter-spacing: -0.055em; line-height: 1.06; }
+    .section-heading > p { margin: 0 0 4px; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+    .services-section { background: #f7fafb; }
+    .service-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; max-width: 1340px; margin: 0 auto; }
+    .service-card { position: relative; min-height: 258px; padding: 27px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: white; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: rgba(4, 127, 155, 0.55); box-shadow: 0 18px 45px rgba(23, 40, 55, 0.08); }
+    .service-card:last-child { grid-column: span 2; background: var(--ink); color: white; }
+    .service-number { display: inline-grid; width: 42px; height: 42px; margin-bottom: 31px; place-items: center; border-radius: 9px; background: var(--ice); color: var(--cyan-deep); font-size: 0.77rem; font-weight: 800; letter-spacing: 0.08em; }
+    .service-card:last-child .service-number { background: rgba(22, 213, 245, 0.12); color: var(--cyan); }
+    .service-card h3 { margin: 0 0 12px; color: var(--ink); font-size: 1.14rem; letter-spacing: -0.025em; }
+    .service-card:last-child h3 { color: white; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 0.91rem; line-height: 1.68; }
+    .service-card:last-child p { max-width: 560px; color: #b3c5cd; }
+    .services-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1340px; margin: 18px auto 0; padding: 23px 27px; border: 1px solid #b9e4ec; border-radius: 14px; background: var(--ice); }
+    .services-cta p { margin: 0; color: #34505f; }
+    .services-cta strong { color: var(--ink); }
+    .services-cta a { flex: 0 0 auto; color: var(--cyan-deep); font-weight: 750; }
+    .services-cta a:hover, .services-cta a:focus-visible { text-decoration: underline; }
+
+    .process-section { background: white; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; max-width: 1340px; margin: 0 auto; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--line); }
+    .steps article { display: flex; gap: 21px; min-height: 220px; padding: 31px; background: #fbfdfe; }
+    .steps article > span { display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--ink); color: var(--cyan); font-weight: 760; }
+    .steps h3 { margin: 8px 0 12px; color: var(--ink); font-size: 1.08rem; }
+    .steps p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+
+    .about-section { background: var(--ink-soft); }
+    .about-panel { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr); gap: 9vw; max-width: 1340px; margin: 0 auto; }
+    .about-panel h2 { color: white; }
+    .about-panel .eyebrow { color: var(--cyan); }
+    .about-copy > p { margin: 0 0 19px; color: #bed0d8; font-size: 1.04rem; line-height: 1.8; }
+    .values { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+    .values span { padding: 9px 13px; border: 1px solid rgba(22, 213, 245, 0.22); border-radius: 999px; background: rgba(22, 213, 245, 0.05); color: #d7f7fc; font-size: 0.81rem; }
+
+    .faq-section { background: #f7fafb; }
+    .faq-list { max-width: 1040px; margin: 0 auto; border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 24px; padding: 17px 2px; color: var(--ink); cursor: pointer; font-size: 1.02rem; font-weight: 700; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary span { color: var(--cyan-deep); font-size: 1.55rem; font-weight: 400; transition: transform 160ms ease; }
+    .faq-list details[open] summary span { transform: rotate(45deg); }
+    .faq-list details p { max-width: 810px; margin: -4px 0 23px; color: var(--muted); line-height: 1.75; }
+
+    .contact-section { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr); gap: 8vw; padding: 104px 7vw; background: linear-gradient(135deg, #04829f, #06abc8); color: white; }
+    .contact-copy h2 { color: white; }
+    .contact-copy > p:last-child { max-width: 600px; margin: 24px 0 0; color: #daf9fd; line-height: 1.75; }
+    .eyebrow.light { color: white; }
+    .contact-options { align-self: center; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 15px; background: rgba(5, 39, 55, 0.18); }
+    .contact-options > a, .email-option { border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
+    .contact-options > a, .email-option > a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 23px; }
+    .contact-options > a:hover, .contact-options > a:focus-visible, .email-option > a:hover, .email-option > a:focus-visible { background: rgba(255, 255, 255, 0.1); }
+    .contact-options span { color: #d8f7fb; font-size: 0.83rem; }
+    .contact-options strong { overflow-wrap: anywhere; text-align: right; font-size: 0.96rem; }
+    .email-option { position: relative; border-bottom: 0; }
+    .email-option > a { padding-right: 120px; }
+    .email-option button { position: absolute; top: 50%; right: 17px; padding: 7px 10px; transform: translateY(-50%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 6px; background: rgba(5, 39, 55, 0.22); color: white; cursor: pointer; font: inherit; font-size: 0.75rem; font-weight: 700; }
+    .email-option button:hover, .email-option button:focus-visible { background: rgba(255, 255, 255, 0.18); }
+
+    footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 40px; padding: 34px 5vw; background: #050d17; color: #91a6b1; font-size: 0.8rem; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand img { width: 42px; height: 42px; }
+    .footer-brand strong, .footer-brand span { display: block; }
+    .footer-brand strong { margin-bottom: 3px; color: white; font-size: 0.95rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a:hover, .footer-links a:focus-visible { color: var(--cyan); }
+    footer > p { margin: 0; text-align: right; }
+    :focus-visible { outline: 3px solid #f3b548; outline-offset: 4px; }
+
+    @media (max-width: 1120px) {
+      .hero { grid-template-columns: minmax(0, 1fr) 350px; gap: 42px; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .service-card:last-child { grid-column: span 2; }
+      .steps article { padding: 26px 22px; }
+    }
+
+    @media (max-width: 860px) {
+      .site-header { min-height: 70px; }
+      nav { gap: 16px; }
+      nav a:not(.nav-cta) { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 78px; }
+      .hero-content { max-width: 720px; }
+      .hero-card { max-width: 620px; }
+      .trust-strip { grid-template-columns: 1fr; }
+      .trust-strip p, .trust-strip p:first-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .trust-strip p:last-child { border-bottom: 0; }
+      .section-heading, .about-panel, .contact-section { grid-template-columns: 1fr; gap: 38px; }
+      .steps { grid-template-columns: 1fr; }
+      .steps article { min-height: auto; }
+      footer { grid-template-columns: 1fr; gap: 24px; }
+      footer > p { text-align: left; }
+    }
+
+    @media (max-width: 590px) {
+      .site-header { padding: 0 18px; }
+      .brand img { width: 40px; height: 40px; }
+      .brand { font-size: 1.05rem; }
+      .nav-cta { padding: 8px 13px; }
+      .hero, .section, .contact-section { padding-right: 20px; padding-left: 20px; }
+      .hero { padding-top: 64px; padding-bottom: 65px; }
+      .hero h1 { font-size: clamp(2.8rem, 15vw, 4rem); }
+      .button { width: 100%; }
+      .hero-notes { display: grid; gap: 10px; }
+      .hero-card { padding: 22px; }
+      .section { padding-top: 75px; padding-bottom: 75px; }
+      .section-heading { margin-bottom: 35px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card:last-child { grid-column: auto; }
+      .services-cta { align-items: flex-start; flex-direction: column; }
+      .about-panel { grid-template-columns: 1fr; }
+      .contact-section { padding-top: 75px; padding-bottom: 75px; }
+      .contact-options > a, .email-option > a { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .contact-options strong { text-align: left; }
+      .email-option > a { padding-right: 23px; padding-bottom: 56px; }
+      .email-option button { top: auto; right: auto; bottom: 16px; left: 23px; transform: none; }
+      .footer-links { flex-wrap: wrap; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "CassutoTech",
+      "url": "https://cassutotech.com",
+      "email": "founder.casstech@gmail.com",
+      "telephone": "+1-618-218-7572",
+      "areaServed": "Southern Illinois",
+      "description": "Local and remote computer help, Windows setup, cleanup, troubleshooting, performance optimization, and technology consulting."
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="CassutoTech home">
+      <img src="cassutotech-mark.svg" alt="">
+      <span>Cassuto<span>Tech</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Get help</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Southern Illinois · Local &amp; remote support</p>
+        <h1>Computer help that makes <em>technology feel easier.</em></h1>
+        <p class="hero-copy">Friendly computer help for everyday problems. I keep the explanations simple, and I won't try to sell you work you don't need.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="tel:+16182187572">Call 618-218-7572</a>
+          <a class="button button-secondary" href="#services">Explore services</a>
+        </div>
+        <div class="hero-notes" aria-label="Service highlights">
+          <span>Clear explanations</span>
+          <span>You approve the work</span>
+          <span>Calls &amp; texts welcome</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="CassutoTech contact card">
+        <div class="hero-logo-wrap"><img src="cassutotech-mark.svg" alt="CassutoTech CT logo"></div>
+        <p class="status"><span></span> Accepting support requests</p>
+        <h2>Need help with a computer?</h2>
+        <p>Start with a call or text. Tell me what is going on, and I'll help you figure out what to do next.</p>
+        <a class="contact-row" href="sms:+16182187572"><span>Text CassutoTech</span><strong>618-218-7572</strong></a>
+        <a class="contact-row" href="mailto:founder.casstech@gmail.com?subject=CassutoTech%20Support%20Request"><span>Email CassutoTech</span><strong>founder.casstech@gmail.com</strong></a>
+      </aside>
+    </section>
+
+    <section class="trust-strip" aria-label="Why choose CassutoTech">
+      <p><strong>Local service</strong><span>Based in Southern Illinois</span></p>
+      <p><strong>Flexible support</strong><span>In-person and remote options</span></p>
+      <p><strong>Plain language</strong><span>No confusing tech talk</span></p>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> Services</p><h2>Help with the computer stuff you use every day.</h2></div>
+        <p>I help individuals, families, and small local businesses with common computer problems and setup needs.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-number">01</span><h3>New Computer Setup</h3><p>Got a new computer? I can help get it updated, connected, organized, and ready to use.</p></article>
+        <article class="service-card"><span class="service-number">02</span><h3>Windows Updates &amp; Security</h3><p>I can check Windows Update, review the built-in security settings, and make sure the basics are covered.</p></article>
+        <article class="service-card"><span class="service-number">03</span><h3>Software Installation</h3><p>Need a program, printer, or computer accessory set up? I can help install and configure it.</p></article>
+        <article class="service-card"><span class="service-number">04</span><h3>Computer Cleanup</h3><p>If your computer feels cluttered or overloaded, I can clean up files and review what starts in the background.</p></article>
+        <article class="service-card"><span class="service-number">05</span><h3>Performance Optimization</h3><p>I can look for common reasons your computer is running slowly and see what can be improved.</p></article>
+        <article class="service-card"><span class="service-number">06</span><h3>Basic Troubleshooting</h3><p>Help with common software, Wi-Fi, printer, account, and everyday computer problems.</p></article>
+        <article class="service-card"><span class="service-number">07</span><h3>Technology Consulting</h3><p>Not sure what computer or upgrade to buy? I can help you compare your options and choose what fits your needs.</p></article>
+      </div>
+      <div class="services-cta">
+        <p><strong>Not sure which service fits?</strong> Tell me what is happening, and I'll help you sort it out.</p>
+        <a href="sms:+16182187572">Text your question <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="section-heading compact"><div><p class="eyebrow"><span></span> How it works</p><h2>Getting help is simple.</h2></div></div>
+      <div class="steps">
+        <article><span>1</span><div><h3>Tell me what is going on</h3><p>Call, text, or email with a quick description of the problem or what you need help with.</p></div></article>
+        <article><span>2</span><div><h3>We'll figure out the best option</h3><p>Some problems can be handled remotely. Others make more sense to look at in person.</p></div></article>
+        <article><span>3</span><div><h3>You approve the work</h3><p>I'll explain what I recommend before I start. Nothing gets done without your okay.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-panel">
+        <div><p class="eyebrow"><span></span> About CassutoTech</p><h2>Local computer help from someone who listens.</h2></div>
+        <div class="about-copy">
+          <p>CassutoTech is a small, owner-run business based in Southern Illinois. I started it because I enjoy helping people understand their computers without making them feel talked down to.</p>
+          <p>I don't pretend every problem has an instant fix. I'll take a look, explain what I find in normal language, and let you decide what happens next.</p>
+          <div class="values"><span>Careful with your device</span><span>Easy-to-follow explanations</span><span>Honest recommendations</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="section-heading compact"><div><p class="eyebrow"><span></span> Common questions</p><h2>Before you reach out.</h2></div></div>
+      <div class="faq-list">
+        <details><summary>Where does CassutoTech provide in-person service?<span aria-hidden="true">+</span></summary><p>CassutoTech is based in Southern Illinois. Send me your town or ZIP code and I'll let you know if in-person service is available in your area. Remote help is also available for many common computer problems.</p></details>
+        <details><summary>Can I text instead of calling?<span aria-hidden="true">+</span></summary><p>Yes. You can call or text 618-218-7572. Just include your first name and a quick description of what you need help with.</p></details>
+        <details><summary>Will you explain what you are doing to my computer?<span aria-hidden="true">+</span></summary><p>Yes. I'll explain what I recommend in normal language and get your approval before I start working on anything.</p></details>
+        <details><summary>Can every problem be fixed remotely?<span aria-hidden="true">+</span></summary><p>No. Some hardware, internet, or startup problems need to be looked at in person. I'll help you figure out which option makes the most sense.</p></details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow light"><span></span> Get support</p>
+        <h2>Tell me what you need help with.</h2>
+        <p>Call, text, or email with your name, town, and a quick description of the problem.</p>
+      </div>
+      <div class="contact-options">
+        <a href="tel:+16182187572"><span>Call CassutoTech</span><strong>618-218-7572</strong></a>
+        <a href="sms:+16182187572"><span>Send a text</span><strong>Start a message</strong></a>
+        <div class="email-option">
+          <a href="mailto:founder.casstech@gmail.com?subject=CassutoTech%20Support%20Request"><span>Email CassutoTech</span><strong>founder.casstech@gmail.com</strong></a>
+          <button id="copy-email" type="button" aria-live="polite">Copy email</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="cassutotech-mark.svg" alt=""><div><strong>CassutoTech</strong><span>Local &amp; remote computer help</span></div></div>
+    <div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <p>© <span id="year">2026</span> CassutoTech · Southern Illinois</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const copyButton = document.getElementById("copy-email");
+    copyButton.addEventListener("click", async () => {
+      const email = "founder.casstech@gmail.com";
+      try {
+        await navigator.clipboard.writeText(email);
+        copyButton.textContent = "Copied";
+        window.setTimeout(() => { copyButton.textContent = "Copy email"; }, 2200);
+      } catch {
+        window.location.href = "mailto:" + email + "?subject=CassutoTech%20Support%20Request";
+      }
+    });
+  </script>
+</body>
+</html>

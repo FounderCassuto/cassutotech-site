@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">CassutoTech CT logo</title>
+  <desc id="desc">Balanced white CT monogram inside a cyan hexagon on a dark circular badge</desc>
+  <circle cx="512" cy="512" r="466" fill="#07111F"/>
+  <circle cx="512" cy="512" r="452" fill="none" stroke="#26394A" stroke-width="10"/>
+  <path d="M512 211 773 362 773 662 512 813 251 662 251 362Z" fill="none" stroke="#16D5F5" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M506.222 459.513C503.683 435.386 499.873 422.688 490.561 405.757C471.513 371.048 438.921 352 399.556 352C328.444 352 284 413.799 284 512.847C284 611.471 327.175 672 398.286 672C431.302 672 459.238 658.455 478.286 632.635C492.677 613.164 499.45 595.386 506.222 559.831H454.159C450.349 576.762 447.81 584.381 442.307 593.27C432.148 608.931 417.333 616.974 398.709 616.974C360.19 616.974 336.91 578.032 336.91 513.27C336.91 445.968 360.19 407.026 400.825 407.026C418.18 407.026 432.995 414.646 441.884 427.344C447.386 436.233 450.349 443.005 454.159 459.513Z" fill="#FFFFFF"/>
+  <path d="M664.15 408.602H743.482V352H530V408.602H609.331V672H664.15Z" fill="#FFFFFF"/>
+</svg>
