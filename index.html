@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10283e">
+  <title>CassutoTech | Home Tech Help in Southern Illinois</title>
+  <meta name="description" content="Owner-run help with Windows computers, printers, Wi-Fi, gaming systems, and smart home devices in Southern Illinois.">
+  <meta name="keywords" content="Southern Illinois computer help, local IT support, Windows troubleshooting, printer help, Wi-Fi help, gaming computer help, smart home setup, CassutoTech">
+  <link rel="canonical" href="https://cassutotech.com/">
+  <link rel="icon" href="cassutotech-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="CassutoTech | Home Tech Help in Southern Illinois">
+  <meta property="og:description" content="Answer four quick questions and prepare a text for Preston at CassutoTech.">
+  <meta property="og:url" content="https://cassutotech.com/">
+  <meta property="og:site_name" content="CassutoTech">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"CassutoTech","url":"https://cassutotech.com","email":"founder.cassutotech@gmail.com","telephone":"+16188165274","areaServed":"Southern Illinois","description":"Owner-run help with Windows computers, printers, Wi-Fi, gaming systems, and smart home devices."}</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="side-rail" aria-label="CassutoTech quick navigation">
+    <a class="rail-mark" href="#top" aria-label="CassutoTech home"><img src="cassutotech-mark.svg" alt=""></a>
+    <div class="rail-name"><span>Cassuto</span><strong>Tech</strong></div>
+    <nav aria-label="Page sections">
+      <a href="#help"><span>01</span>Diagnose</a>
+      <a href="#booking"><span>02</span>Request day</a>
+      <a href="#standards"><span>03</span>Work terms</a>
+      <a href="#contact"><span>04</span>Contact</a>
+    </nav>
+    <div class="rail-contact">
+      <a href="tel:+16188165274" aria-label="Call Preston at 618-816-5274">Call</a>
+      <a href="sms:+16188165274" data-quick-text aria-label="Text Preston at 618-816-5274">Text</a>
+      <button type="button" data-copy-email aria-live="polite" aria-label="Copy Preston's email address, founder.cassutotech@gmail.com">Copy email</button>
+    </div>
+  </aside>
+
+  <main id="top" class="site-canvas">
+    <header class="mobile-brand">
+      <a href="#top"><img src="cassutotech-mark.svg" alt=""><span>Cassuto<strong>Tech</strong></span></a>
+      <small>Southern Illinois</small>
+    </header>
+
+    <section class="owner-intro" aria-labelledby="owner-title">
+      <div class="owner-statement">
+        <div class="owner-heading">
+          <p>Owner-run computer and home tech help</p>
+          <h1 id="owner-title">Hi, I'm Preston.</h1>
+          <p class="owner-note">I run CassutoTech in Southern Illinois. Tell me what is giving you trouble, and I'll help you work out the next step.</p>
+        </div>
+        <dl class="owner-ledger" aria-label="CassutoTech service record">
+          <div><dt>Owner</dt><dd>Preston Cassuto</dd></div>
+          <div><dt>Background</dt><dd>Hands-on IT and data-center experience</dd></div>
+          <div><dt>Availability</dt><dd>Local and remote help by appointment</dd></div>
+          <div><dt>Communication</dt><dd>You work directly with me</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="diagnostic" id="help" aria-labelledby="diagnostic-title">
+      <div class="diagnostic-heading">
+        <p class="step-count" id="diagnostic-step">1 of 4</p>
+        <div>
+          <h2 id="diagnostic-title">Let's narrow down the problem.</h2>
+          <p>Answer four quick questions, and the site will put together a text for you to review. Nothing is sent automatically.</p>
+        </div>
+      </div>
+      <div class="question-stage" id="diagnostic-stage" aria-live="polite"></div>
+    </section>
+
+    <section class="booking" id="booking" aria-labelledby="booking-title">
+      <header class="booking-heading">
+        <p>Schedule / 02</p>
+        <h2 id="booking-title">Request a service day.</h2>
+        <p>Choose a preferred day, a backup, and the part of the day that works best. I'll confirm one of them or offer another opening.</p>
+      </header>
+      <div class="booking-workspace">
+        <div class="booking-notice" role="note">
+          <strong>A request is not a confirmed appointment.</strong>
+          <span>Availability changes from week to week. Your day is reserved only after you receive a confirmation from Preston.</span>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="booking-grid">
+            <label><span>Your first name</span><input required name="name" autocomplete="given-name"></label>
+            <label><span>Your town or ZIP code</span><input required name="town" autocomplete="postal-code"></label>
+            <label><span>What needs help?</span><select required name="service"><option value="" disabled selected>Choose one</option><option>Windows PC or laptop</option><option>Printer or Wi-Fi</option><option>Gaming PC or console</option><option>Smart-home device</option></select></label>
+            <label><span>Type of support</span><select required name="support"><option value="" disabled selected>Choose one</option><option>remote support</option><option>local in-person support</option><option>whichever Preston recommends</option></select></label>
+            <label><span>Preferred day</span><input required type="date" name="preferredDate" data-booking-date></label>
+            <label><span>Backup day <small>Optional</small></span><input type="date" name="backupDate" data-booking-date></label>
+            <label><span>Preferred time</span><select required name="timePreference"><option value="" disabled selected>Choose one</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Any time that day</option></select></label>
+          </div>
+          <label class="booking-details"><span>What is going on with the device?</span><textarea required name="details" rows="4" placeholder="A short description is enough."></textarea></label>
+          <button class="primary-action" type="submit">Review my day request</button>
+        </form>
+        <div class="booking-result" id="booking-result" aria-live="polite" hidden>
+          <p>Your request is ready</p>
+          <h3>Review it before sending.</h3>
+          <blockquote id="booking-message"></blockquote>
+          <div class="result-actions">
+            <a class="primary-action" href="sms:+16188165274" id="open-booking-text">Open my text request</a>
+            <button type="button" id="copy-booking">Copy request</button>
+            <button type="button" id="edit-booking">Change my choices</button>
+          </div>
+          <small>Nothing is sent automatically. After you send the text, Preston will confirm the day or suggest another one.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-standard" id="standards" aria-labelledby="standards-title">
+      <header class="standard-heading">
+        <p>Work record / 03</p>
+        <h2 id="standards-title">No surprise work.</h2>
+        <p>You stay in control of the scope and cost from the first recommendation through the final check.</p>
+      </header>
+      <ol class="approval-route">
+        <li><span>01</span><div><strong>Understand the problem</strong><p>I review what is happening and explain the most practical next step.</p></div></li>
+        <li><span>02</span><div><strong>Agree before work starts</strong><p>You receive the expected cost and decide whether to continue.</p></div></li>
+        <li><span>03</span><div><strong>Stop if the scope changes</strong><p>If I find something different, I contact you before extra work or parts.</p></div></li>
+        <li><span>04</span><div><strong>Check the result together</strong><p>I explain what was completed and anything you should watch afterward.</p></div></li>
+      </ol>
+      <div class="scope-line"><strong>Current service boundary</strong><p>The diagnostic above covers the work CassutoTech currently advertises. Parts, severe physical damage, data recovery, and work outside that list are discussed before a job is accepted.</p></div>
+    </section>
+
+    <section class="contact-ledger" id="contact" aria-labelledby="contact-title">
+      <div class="area-heading">
+        <p>Service area / 04</p>
+        <h2 id="contact-title">Southern Illinois, by appointment.</h2>
+        <p>Include your town or ZIP code with your request. I'll confirm whether an in-person visit works or whether remote help makes more sense.</p>
+      </div>
+      <dl class="area-register">
+        <div><dt>Local visits</dt><dd>For equipment and connection problems that need hands-on work.</dd></div>
+        <div><dt>Remote help</dt><dd>Available when the work does not require physical access to the device.</dd></div>
+        <div><dt>Travel range</dt><dd>I confirm the distance and any travel details before we set the day.</dd></div>
+      </dl>
+      <div class="direct-contact" aria-label="Contact CassutoTech directly">
+        <p>Contact Preston directly</p>
+        <a href="tel:+16188165274" aria-label="Call Preston at 618-816-5274"><span>Call</span><strong>618-816-5274</strong></a>
+        <a href="sms:+16188165274" data-quick-text aria-label="Text Preston at 618-816-5274"><span>Text</span><strong>Open a message</strong></a>
+        <a class="mobile-email-action" href="mailto:founder.cassutotech@gmail.com?subject=CassutoTech%20Support%20Request&amp;body=Hi%20Preston%2C%0A%0AI%20found%20CassutoTech%20online%20and%20need%20help%20with%3A%20" aria-label="Email Preston at founder.cassutotech@gmail.com"><span>Email</span><strong>founder.cassutotech@gmail.com</strong></a>
+        <button class="desktop-email-action" type="button" data-copy-email aria-live="polite" aria-label="Copy Preston's email address, founder.cassutotech@gmail.com"><span>Copy email</span><strong data-email-label>founder.cassutotech@gmail.com</strong></button>
+      </div>
+    </section>
+
+    <footer><span>&copy; <span id="year">2026</span> CassutoTech</span><span>cassutotech.com</span></footer>
+  </main>
+
+  <div class="mobile-dock" aria-label="Quick contact">
+    <a href="tel:+16188165274" aria-label="Call Preston at 618-816-5274">Call</a>
+    <a href="sms:+16188165274" data-quick-text aria-label="Text Preston at 618-816-5274">Text</a>
+    <a href="mailto:founder.cassutotech@gmail.com?subject=CassutoTech%20Support%20Request&amp;body=Hi%20Preston%2C%0A%0AI%20found%20CassutoTech%20online%20and%20need%20help%20with%3A%20" aria-label="Email Preston at founder.cassutotech@gmail.com">Email</a>
+  </div>
+</body>
+</html>
